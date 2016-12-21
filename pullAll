@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#This script will go into my folder containing all my github files
+#and pull every folder
+
+cd ~/Documents/Github/
+
+for d in */ ; do
+	echo "$d"
+	cd $d
+	git pull
+	cd ..
+	echo ""
+done
